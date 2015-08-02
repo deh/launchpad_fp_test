@@ -1,5 +1,5 @@
 # launchpad_fp_test
-Test routine for experimenting with a problem of printf floating pt with STM32F103VET6 and launchpad compiler
+Test routine for experimenting with a problem of printf floating pt with STM32F103VET6 and launchpad compiler.  This routine demonstrates the problem.
 
 This code is a strip down and hack of a svn repository for looking into printf, sprintf, not working for floating pt output on a STM32F103VET6.  The organization may look a bit strange as a result of the stripping and hacking.
 
