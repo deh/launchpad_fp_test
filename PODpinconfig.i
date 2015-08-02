@@ -1,5 +1,5 @@
 # 1 "PODpinconfig.c"
-# 1 "/home/deh/launchpadtest/sensor/launchpadtest/trunk//"
+# 1 "/home/deh/launchpad_fp_test//"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "PODpinconfig.c"

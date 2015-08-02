@@ -1,8 +1,13 @@
-/******************************************************************************
-* File Name          : nvicbitband.h
+/******************** (C) COPYRIGHT 2010 **************************************
+* File Name          : nvicdirect.h
+* Hackor             : deh
 * Date First Issued  : 10/19/2010
-* Description        : nvic addresses for bit banding operations
+* Description        : nvic addresses for bit operations
 *******************************************************************************/
+/*
+07-14-2011 - Adjust names UART4,5
+*/
+
 
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __NVICBITBAND_H
@@ -12,8 +17,25 @@
 #include "../libusartstm32/commonbitband.h"	// Bitband macros
 
 /* NVIC_BASE is picked up from libopenstm32/memorymap.h */
-#define NVICISER (NVIC_BASE + 0x00)
-#define NVICICER (NVIC_BASE + 0x80)
+
+/* Interrupt priority */
+#define NVICIPR(irqnumber,priority)	( *(u32*)(NVIC_BASE + 0x300 + ((irqnumber / 4) * 4)) ) |= (priority << ((irqnumber % 4) * 8))
+
+/* Interrupt set enable */
+#define NVICISER(irqnumber) 	(*(u32*)(NVIC_BASE + 0x000 + (irqnumber/32)*4)) |= (1<<(irqnumber % 32))
+
+/* Interrupt clear enable */
+#define NVICICER(irqnumber) 	(*(u32*)(NVIC_BASE + 0x080 + (irqnumber/32)*4)) |= (1<<(irqnumber % 32))
+
+/* Interrupt set pending */
+#define NVICISPR(irqnumber) 	(*(u32*)(NVIC_BASE + 0x0100 + (irqnumber/32)*4)) |= (1<<(irqnumber % 32))
+
+/* Interrupt clear pending */
+#define NVICICPR(irqnumber) 	(*(u32*)(NVIC_BASE + 0x180 + (irqnumber/32)*4)) |= (1<<(irqnumber % 32))
+
+/* Interrupt active bit register */
+#define NVICIABR(irqnumber) 	(*(u32*)(NVIC_BASE + 0x200 + (irqnumber/32)*4)) |= (1<<(irqnumber % 32))
+
 
 /* User Interrupts */
 #define NVIC_WWDG_IRQ			0
@@ -68,8 +90,8 @@
 #define NVIC_SDIO_IRQ			49
 #define NVIC_TIM5_IRQ			50
 #define NVIC_SPI3_IRQ			51
-#define NVIC_USART4_IRQ			52
-#define NVIC_USART5_IRQ			53
+#define NVIC_UART4_IRQ			52
+#define NVIC_UART5_IRQ			53
 #define NVIC_TIM6_IRQ			54
 #define NVIC_TIM7_IRQ			55
 #define NVIC_DMA2_CHANNEL1_IRQ		56

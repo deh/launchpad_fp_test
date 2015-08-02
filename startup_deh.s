@@ -391,5 +391,5 @@ Reset_Handler:
 .LASF0:
 	.ascii	"__data_section_start\000"
 .LASF8:
-	.ascii	"/home/deh/launchpadtest/sensor/launchpadtest/trunk\000"
+	.ascii	"/home/deh/launchpad_fp_test\000"
 	.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150529 (release) [ARM/embedded-4_9-branch revision 224288]"

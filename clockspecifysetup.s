@@ -1217,8 +1217,6 @@ pmul1:
 	.ascii	"AHB_128\000"
 .LASF38:
 	.ascii	"HSOSELECT_HSE_XTAL_INPUT\000"
-.LASF70:
-	.ascii	"/home/deh/launchpadtest/sensor/launchpadtest/trunk\000"
 .LASF69:
 	.ascii	"clockspecifysetup.c\000"
 .LASF44:
@@ -1279,6 +1277,8 @@ pmul1:
 	.ascii	"uint32_t\000"
 .LASF46:
 	.ascii	"unsigned int\000"
+.LASF40:
+	.ascii	"pllsrc\000"
 .LASF67:
 	.ascii	"ahbtbl\000"
 .LASF5:
@@ -1317,8 +1317,8 @@ pmul1:
 	.ascii	"hsoselect\000"
 .LASF37:
 	.ascii	"HSOSELECT_HSE_XTAL_REMAPPED\000"
-.LASF40:
-	.ascii	"pllsrc\000"
+.LASF70:
+	.ascii	"/home/deh/launchpad_fp_test\000"
 .LASF63:
 	.ascii	"pdev1\000"
 .LASF0:

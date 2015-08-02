@@ -830,8 +830,6 @@ configure_pin_in_pd:
 	.ascii	"PA0_reconfig\000"
 .LASF3:
 	.ascii	"short unsigned int\000"
-.LASF20:
-	.ascii	"/home/deh/launchpadtest/sensor/launchpadtest/trunk\000"
 .LASF5:
 	.ascii	"__uint16_t\000"
 .LASF6:
@@ -844,8 +842,8 @@ configure_pin_in_pd:
 	.ascii	"long long unsigned int\000"
 .LASF8:
 	.ascii	"long long int\000"
-.LASF15:
-	.ascii	"char\000"
+.LASF20:
+	.ascii	"/home/deh/launchpad_fp_test\000"
 .LASF19:
 	.ascii	"PODpinconfig.c\000"
 .LASF2:
@@ -856,6 +854,8 @@ configure_pin_in_pd:
 	.ascii	"uint32_t\000"
 .LASF4:
 	.ascii	"long int\000"
+.LASF15:
+	.ascii	"char\000"
 .LASF0:
 	.ascii	"signed char\000"
 .LASF13:

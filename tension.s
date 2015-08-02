@@ -2072,8 +2072,6 @@ clocks:
 	.ascii	"AHB_64\000"
 .LASF12:
 	.ascii	"long long unsigned int\000"
-.LASF81:
-	.ascii	"/home/deh/launchpadtest/sensor/launchpadtest/trunk\000"
 .LASF74:
 	.ascii	"USART1_rxinttxint_init\000"
 .LASF24:
@@ -2207,6 +2205,8 @@ clocks:
 	.ascii	"PLLMUL_5X\000"
 .LASF31:
 	.ascii	"PLLMUL_14X\000"
+.LASF81:
+	.ascii	"/home/deh/launchpad_fp_test\000"
 .LASF50:
 	.ascii	"AHB_512\000"
 .LASF63:

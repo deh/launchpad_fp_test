@@ -2210,8 +2210,6 @@ __env:
 	.ascii	"long long unsigned int\000"
 .LASF40:
 	.ascii	"st_blocks\000"
-.LASF77:
-	.ascii	"/home/deh/launchpadtest/sensor/launchpadtest/trunk\000"
 .LASF57:
 	.ascii	"_link\000"
 .LASF45:
@@ -2349,6 +2347,8 @@ __env:
 	.ascii	"tms_cstime\000"
 .LASF68:
 	.ascii	"status\000"
+.LASF77:
+	.ascii	"/home/deh/launchpad_fp_test\000"
 .LASF23:
 	.ascii	"mode_t\000"
 .LASF25:

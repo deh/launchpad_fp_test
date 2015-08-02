@@ -219,7 +219,7 @@ DTW_counter_init:
 .LASF2:
 	.ascii	"short int\000"
 .LASF11:
-	.ascii	"/home/deh/launchpadtest/sensor/launchpadtest/trunk\000"
+	.ascii	"/home/deh/launchpad_fp_test\000"
 .LASF6:
 	.ascii	"long long int\000"
 	.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150529 (release) [ARM/embedded-4_9-branch revision 224288]"

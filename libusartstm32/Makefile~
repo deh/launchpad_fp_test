@@ -21,6 +21,7 @@ CFLAGS		= -Os -g -Wall -Wextra -Iinclude -fno-common \
 AFLAGS  = -mcpu=cortex-m3 -mthumb
 
 ARFLAGS	= rcsv
+#ARFLAGS		= rcs
 
 OBJS = \
 usartx_setbaud.o \
@@ -47,6 +48,9 @@ USART1_txint_busy.o \
 \
 USARTremap.o \
 \
+
+
+
 
 # Be silent per default, but 'make V=1' will show all compiler calls.
 ifneq ($(V),1)

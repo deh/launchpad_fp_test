@@ -689,8 +689,6 @@ vector_table:
 	.ascii	"long unsigned int\000"
 .LASF3:
 	.ascii	"short unsigned int\000"
-.LASF20:
-	.ascii	"/home/deh/launchpadtest/sensor/launchpadtest/trunk\000"
 .LASF10:
 	.ascii	"uint32_t\000"
 .LASF13:
@@ -709,6 +707,8 @@ vector_table:
 	.ascii	"sizetype\000"
 .LASF6:
 	.ascii	"long long int\000"
+.LASF20:
+	.ascii	"/home/deh/launchpad_fp_test\000"
 .LASF2:
 	.ascii	"short int\000"
 .LASF11:

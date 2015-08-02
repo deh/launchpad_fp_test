@@ -8,55 +8,12 @@
 	.eabi_attribute 25, 1
 	.eabi_attribute 26, 1
 	.eabi_attribute 30, 4
+	.eabi_attribute 34, 1
 	.eabi_attribute 18, 4
+	.thumb
 	.file	"usartx_tx_advlnptr.c"
-@ GNU C (Sourcery G++ Lite 2011.03-42) version 4.5.2 (arm-none-eabi)
-@	compiled by GNU C version 4.3.2, GMP version 4.3.2, MPFR version 2.4.2, MPC version 0.8.1
-@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-@ options passed:  -fpreprocessed usartx_tx_advlnptr.i -mcpu=cortex-m3
-@ -mthumb -auxbase-strip usartx_tx_advlnptr.o -g -Os -Wall -Wextra
-@ -Wstrict-prototypes -fno-common -fverbose-asm
-@ options enabled:  -falign-loops -fargument-alias -fauto-inc-dec
-@ -fbranch-count-reg -fcaller-saves -fcprop-registers -fcrossjumping
-@ -fcse-follow-jumps -fdefer-pop -fdelete-null-pointer-checks
-@ -fdwarf2-cfi-asm -fearly-inlining -feliminate-unused-debug-types
-@ -fexpensive-optimizations -fextension-elimination -fforward-propagate
-@ -ffunction-cse -fgcse -fgcse-lm -fguess-branch-probability -fident
-@ -fif-conversion -fif-conversion2 -findirect-inlining -finline
-@ -finline-functions -finline-functions-called-once
-@ -finline-small-functions -fipa-cp -fipa-pure-const -fipa-reference
-@ -fipa-sra -fira-share-save-slots -fira-share-spill-slots -fivopts
-@ -fkeep-static-consts -fleading-underscore -fmath-errno -fmerge-constants
-@ -fmerge-debug-strings -fomit-frame-pointer -foptimize-register-move
-@ -foptimize-sibling-calls -fpeephole -fpeephole2 -freg-struct-return
-@ -fregmove -freorder-blocks -freorder-functions -frerun-cse-after-loop
-@ -fsched-critical-path-heuristic -fsched-dep-count-heuristic
-@ -fsched-group-heuristic -fsched-interblock -fsched-last-insn-heuristic
-@ -fsched-rank-heuristic -fsched-spec -fsched-spec-insn-heuristic
-@ -fsched-stalled-insns-dep -fschedule-insns2 -fsection-anchors
-@ -fshow-column -fsigned-zeros -fsplit-ivs-in-unroller -fsplit-wide-types
-@ -fstrict-aliasing -fstrict-overflow -fstrict-volatile-bitfields
-@ -fthread-jumps -ftoplevel-reorder -ftrapping-math -ftree-builtin-call-dce
-@ -ftree-ccp -ftree-ch -ftree-copy-prop -ftree-copyrename -ftree-cselim
-@ -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
-@ -ftree-if-to-switch-conversion -ftree-loop-im -ftree-loop-ivcanon
-@ -ftree-loop-optimize -ftree-parallelize-loops= -ftree-phiprop -ftree-pta
-@ -ftree-reassoc -ftree-scev-cprop -ftree-sink -ftree-slp-vectorize
-@ -ftree-sra -ftree-switch-conversion -ftree-ter -ftree-vect-loop-version
-@ -ftree-vrp -funit-at-a-time -fvar-tracking -fvar-tracking-assignments
-@ -fverbose-asm -fzero-initialized-in-bss -mfix-cortex-m3-ldrd
-@ -mlittle-endian -msched-prolog -mthumb -munaligned-access
-
-	.section	.debug_abbrev,"",%progbits
-.Ldebug_abbrev0:
-	.section	.debug_info,"",%progbits
-.Ldebug_info0:
-	.section	.debug_line,"",%progbits
-.Ldebug_line0:
 	.text
 .Ltext0:
-@ Compiler executable checksum: f905e5265c5e2bdb166d278b4b873d0b
-
 	.cfi_sections	.debug_frame
 	.align	1
 	.global	usartx_txmain_advlnptr
@@ -73,32 +30,30 @@ usartx_txmain_advlnptr:
 	@ link register save eliminated.
 .LVL0:
 	.loc 1 18 0
-	ldr	r2, [r0, #4]	@ pUSARTcbtx_1(D)->ptx_begin_m, pUSARTcbtx_1(D)->ptx_begin_m
-	ldrh	r3, [r0, #36]	@ pUSARTcbtx_1(D)->tx_ln_sz, pUSARTcbtx_1(D)->tx_ln_sz
-	adds	r3, r2, r3	@ D.5525, pUSARTcbtx_1(D)->ptx_begin_m, pUSARTcbtx_1(D)->tx_ln_sz
+	ldr	r2, [r0, #4]
+	ldrh	r3, [r0, #36]
+	add	r3, r3, r2
 	.loc 1 19 0
-	ldr	r2, [r0, #24]	@ pUSARTcbtx_1(D)->ptx_ctary_now_m, pUSARTcbtx_1(D)->ptx_ctary_now_m
+	ldr	r2, [r0, #24]
 	.loc 1 18 0
-	str	r3, [r0, #4]	@ D.5525, pUSARTcbtx_1(D)->ptx_begin_m
+	str	r3, [r0, #4]
 	.loc 1 19 0
-	adds	r2, r2, #2	@ tmp147, pUSARTcbtx_1(D)->ptx_ctary_now_m,
-	str	r2, [r0, #24]	@ tmp147, pUSARTcbtx_1(D)->ptx_ctary_now_m
+	adds	r2, r2, #2
+	str	r2, [r0, #24]
 	.loc 1 22 0
-	ldr	r2, [r0, #20]	@ pUSARTcbtx_1(D)->ptx_end, pUSARTcbtx_1(D)->ptx_end
-	cmp	r3, r2	@ D.5525, pUSARTcbtx_1(D)->ptx_end
-	bcc	.L2	@,
+	ldr	r2, [r0, #20]
+	cmp	r3, r2
 	.loc 1 24 0
-	ldr	r3, [r0, #16]	@ pUSARTcbtx_1(D)->ptx_begin, pUSARTcbtx_1(D)->ptx_begin
-	str	r3, [r0, #4]	@ pUSARTcbtx_1(D)->ptx_begin, pUSARTcbtx_1(D)->ptx_begin_m
+	itttt	cs
+	ldrcs	r3, [r0, #16]
+	strcs	r3, [r0, #4]
 	.loc 1 25 0
-	ldr	r3, [r0, #32]	@ pUSARTcbtx_1(D)->ptx_ctary_begin, pUSARTcbtx_1(D)->ptx_ctary_begin
-	str	r3, [r0, #24]	@ pUSARTcbtx_1(D)->ptx_ctary_begin, pUSARTcbtx_1(D)->ptx_ctary_now_m
-.L2:
+	ldrcs	r3, [r0, #32]
+	strcs	r3, [r0, #24]
 	.loc 1 27 0
-	ldr	r3, [r0, #4]	@ pUSARTcbtx_1(D)->ptx_begin_m, pUSARTcbtx_1(D)->ptx_begin_m
-	str	r3, [r0, #0]	@ pUSARTcbtx_1(D)->ptx_begin_m, pUSARTcbtx_1(D)->ptx_now_m
-	.loc 1 30 0
-	bx	lr	@
+	ldr	r3, [r0, #4]
+	str	r3, [r0]
+	bx	lr
 	.cfi_endproc
 .LFE0:
 	.size	usartx_txmain_advlnptr, .-usartx_txmain_advlnptr
@@ -116,51 +71,51 @@ usartx_txisr_advlnptr:
 	@ link register save eliminated.
 .LVL1:
 	.loc 1 38 0
-	ldr	r2, [r0, #12]	@ pUSARTcbtx_1(D)->ptx_begin_d, pUSARTcbtx_1(D)->ptx_begin_d
-	ldrh	r3, [r0, #36]	@ pUSARTcbtx_1(D)->tx_ln_sz, pUSARTcbtx_1(D)->tx_ln_sz
-	adds	r3, r2, r3	@ D.5513, pUSARTcbtx_1(D)->ptx_begin_d, pUSARTcbtx_1(D)->tx_ln_sz
+	ldr	r2, [r0, #12]
+	ldrh	r3, [r0, #36]
+	add	r3, r3, r2
 	.loc 1 39 0
-	ldr	r2, [r0, #28]	@ pUSARTcbtx_1(D)->ptx_ctary_now_d, pUSARTcbtx_1(D)->ptx_ctary_now_d
+	ldr	r2, [r0, #28]
 	.loc 1 38 0
-	str	r3, [r0, #12]	@ D.5513, pUSARTcbtx_1(D)->ptx_begin_d
+	str	r3, [r0, #12]
 	.loc 1 39 0
-	adds	r2, r2, #2	@ tmp147, pUSARTcbtx_1(D)->ptx_ctary_now_d,
-	str	r2, [r0, #28]	@ tmp147, pUSARTcbtx_1(D)->ptx_ctary_now_d
+	adds	r2, r2, #2
+	str	r2, [r0, #28]
 	.loc 1 42 0
-	ldr	r2, [r0, #20]	@ pUSARTcbtx_1(D)->ptx_end, pUSARTcbtx_1(D)->ptx_end
-	cmp	r3, r2	@ D.5513, pUSARTcbtx_1(D)->ptx_end
-	bcc	.L4	@,
+	ldr	r2, [r0, #20]
+	cmp	r3, r2
 	.loc 1 44 0
-	ldr	r3, [r0, #16]	@ pUSARTcbtx_1(D)->ptx_begin, pUSARTcbtx_1(D)->ptx_begin
-	str	r3, [r0, #12]	@ pUSARTcbtx_1(D)->ptx_begin, pUSARTcbtx_1(D)->ptx_begin_d
+	itttt	cs
+	ldrcs	r3, [r0, #16]
+	strcs	r3, [r0, #12]
 	.loc 1 45 0
-	ldr	r3, [r0, #32]	@ pUSARTcbtx_1(D)->ptx_ctary_begin, pUSARTcbtx_1(D)->ptx_ctary_begin
-	str	r3, [r0, #28]	@ pUSARTcbtx_1(D)->ptx_ctary_begin, pUSARTcbtx_1(D)->ptx_ctary_now_d
-.L4:
+	ldrcs	r3, [r0, #32]
+	strcs	r3, [r0, #28]
 	.loc 1 47 0
-	ldr	r3, [r0, #12]	@ pUSARTcbtx_1(D)->ptx_begin_d, pUSARTcbtx_1(D)->ptx_begin_d
-	str	r3, [r0, #8]	@ pUSARTcbtx_1(D)->ptx_begin_d, pUSARTcbtx_1(D)->ptx_now_d
-	.loc 1 50 0
-	bx	lr	@
+	ldr	r3, [r0, #12]
+	str	r3, [r0, #8]
+	bx	lr
 	.cfi_endproc
 .LFE1:
 	.size	usartx_txisr_advlnptr, .-usartx_txisr_advlnptr
 .Letext0:
-	.file 2 "../libusartstm32/../libusartstm32/usartall.h"
-	.file 3 "/home/deh/CodeSourcery/Sourcery_G++_Lite/bin/../lib/gcc/arm-none-eabi/4.5.2/../../../../arm-none-eabi/include/stdint.h"
-	.file 4 "../libusartstm32/../libusartstm32/../libopenstm32/common.h"
-	.section	.debug_info
-	.4byte	0x186
-	.2byte	0x2
+	.file 2 "/opt/launchpad/gcc-arm-none-eabi-4_9-2015q2/arm-none-eabi/include/machine/_default_types.h"
+	.file 3 "/opt/launchpad/gcc-arm-none-eabi-4_9-2015q2/arm-none-eabi/include/sys/_stdint.h"
+	.file 4 "../libusartstm32/../libusartstm32/usartall.h"
+	.file 5 "../libusartstm32/../libusartstm32/../libopenstm32/common.h"
+	.section	.debug_info,"",%progbits
+.Ldebug_info0:
+	.4byte	0x175
+	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF23
-	.byte	0x1
 	.4byte	.LASF24
+	.byte	0x1
 	.4byte	.LASF25
+	.4byte	.LASF26
 	.4byte	.Ltext0
-	.4byte	.Letext0
+	.4byte	.Letext0-.Ltext0
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
 	.byte	0x1
@@ -176,8 +131,8 @@ usartx_txisr_advlnptr:
 	.4byte	.LASF2
 	.uleb128 0x3
 	.4byte	.LASF9
-	.byte	0x3
-	.byte	0x36
+	.byte	0x2
+	.byte	0x2b
 	.4byte	0x45
 	.uleb128 0x2
 	.byte	0x2
@@ -207,160 +162,138 @@ usartx_txisr_advlnptr:
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF8
+	.uleb128 0x3
+	.4byte	.LASF10
+	.byte	0x3
+	.byte	0x1a
+	.4byte	0x3a
 	.uleb128 0x5
 	.ascii	"u16\000"
-	.byte	0x4
+	.byte	0x5
 	.byte	0x1e
-	.4byte	0x3a
+	.4byte	0x76
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x87
+	.4byte	0x92
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x8
-	.4byte	.LASF10
+	.4byte	.LASF11
 	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x76
-	.uleb128 0x7
-	.4byte	.LASF26
-	.byte	0x28
-	.byte	0x2
-	.byte	0x2e
-	.4byte	0x13b
-	.uleb128 0x8
-	.4byte	.LASF11
-	.byte	0x2
-	.byte	0x30
 	.4byte	0x81
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x0
+	.uleb128 0x7
+	.4byte	.LASF27
+	.byte	0x28
+	.byte	0x4
+	.byte	0x2e
+	.4byte	0x130
 	.uleb128 0x8
 	.4byte	.LASF12
-	.byte	0x2
-	.byte	0x31
-	.4byte	0x81
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x4
+	.byte	0x4
+	.byte	0x30
+	.4byte	0x8c
+	.byte	0
 	.uleb128 0x8
 	.4byte	.LASF13
-	.byte	0x2
-	.byte	0x32
-	.4byte	0x81
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x8
+	.byte	0x4
+	.byte	0x31
+	.4byte	0x8c
+	.byte	0x4
 	.uleb128 0x8
 	.4byte	.LASF14
-	.byte	0x2
-	.byte	0x33
-	.4byte	0x81
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0xc
+	.byte	0x4
+	.byte	0x32
+	.4byte	0x8c
+	.byte	0x8
 	.uleb128 0x8
 	.4byte	.LASF15
-	.byte	0x2
-	.byte	0x34
-	.4byte	0x81
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x10
+	.byte	0x4
+	.byte	0x33
+	.4byte	0x8c
+	.byte	0xc
 	.uleb128 0x8
 	.4byte	.LASF16
-	.byte	0x2
-	.byte	0x35
-	.4byte	0x81
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x14
+	.byte	0x4
+	.byte	0x34
+	.4byte	0x8c
+	.byte	0x10
 	.uleb128 0x8
 	.4byte	.LASF17
-	.byte	0x2
-	.byte	0x36
-	.4byte	0x8e
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x18
+	.byte	0x4
+	.byte	0x35
+	.4byte	0x8c
+	.byte	0x14
 	.uleb128 0x8
 	.4byte	.LASF18
-	.byte	0x2
-	.byte	0x37
-	.4byte	0x8e
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x1c
+	.byte	0x4
+	.byte	0x36
+	.4byte	0x99
+	.byte	0x18
 	.uleb128 0x8
 	.4byte	.LASF19
-	.byte	0x2
-	.byte	0x38
-	.4byte	0x8e
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x20
+	.byte	0x4
+	.byte	0x37
+	.4byte	0x99
+	.byte	0x1c
 	.uleb128 0x8
 	.4byte	.LASF20
-	.byte	0x2
-	.byte	0x39
-	.4byte	0x76
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x24
+	.byte	0x4
+	.byte	0x38
+	.4byte	0x99
+	.byte	0x20
 	.uleb128 0x8
 	.4byte	.LASF21
-	.byte	0x2
-	.byte	0x3a
-	.4byte	0x76
-	.byte	0x2
-	.byte	0x23
-	.uleb128 0x26
-	.byte	0x0
-	.uleb128 0x9
-	.byte	0x1
-	.4byte	.LASF27
-	.byte	0x1
-	.byte	0xf
-	.byte	0x1
-	.4byte	.LFB0
-	.4byte	.LFE0
-	.byte	0x2
-	.byte	0x7d
-	.sleb128 0
-	.4byte	0x161
-	.uleb128 0xa
-	.4byte	.LASF22
-	.byte	0x1
-	.byte	0xf
-	.4byte	0x161
-	.byte	0x1
-	.byte	0x50
-	.byte	0x0
-	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x94
-	.uleb128 0xb
-	.byte	0x1
+	.byte	0x39
+	.4byte	0x81
+	.byte	0x24
+	.uleb128 0x8
+	.4byte	.LASF22
+	.byte	0x4
+	.byte	0x3a
+	.4byte	0x81
+	.byte	0x26
+	.byte	0
+	.uleb128 0x9
 	.4byte	.LASF28
 	.byte	0x1
-	.byte	0x23
-	.byte	0x1
-	.4byte	.LFB1
-	.4byte	.LFE1
-	.byte	0x2
-	.byte	0x7d
-	.sleb128 0
+	.byte	0xf
+	.4byte	.LFB0
+	.4byte	.LFE0-.LFB0
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0x153
 	.uleb128 0xa
-	.4byte	.LASF22
+	.4byte	.LASF23
+	.byte	0x1
+	.byte	0xf
+	.4byte	0x153
+	.uleb128 0x1
+	.byte	0x50
+	.byte	0
+	.uleb128 0x6
+	.byte	0x4
+	.4byte	0x9f
+	.uleb128 0xb
+	.4byte	.LASF29
 	.byte	0x1
 	.byte	0x23
-	.4byte	0x161
+	.4byte	.LFB1
+	.4byte	.LFE1-.LFB1
+	.uleb128 0x1
+	.byte	0x9c
+	.uleb128 0xa
+	.4byte	.LASF23
 	.byte	0x1
+	.byte	0x23
+	.4byte	0x153
+	.uleb128 0x1
 	.byte	0x50
-	.byte	0x0
-	.byte	0x0
-	.section	.debug_abbrev
+	.byte	0
+	.byte	0
+	.section	.debug_abbrev,"",%progbits
+.Ldebug_abbrev0:
 	.uleb128 0x1
 	.uleb128 0x11
 	.byte	0x1
@@ -375,25 +308,25 @@ usartx_txisr_advlnptr:
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x10
 	.uleb128 0x6
-	.byte	0x0
-	.byte	0x0
+	.uleb128 0x10
+	.uleb128 0x17
+	.byte	0
+	.byte	0
 	.uleb128 0x2
 	.uleb128 0x24
-	.byte	0x0
+	.byte	0
 	.uleb128 0xb
 	.uleb128 0xb
 	.uleb128 0x3e
 	.uleb128 0xb
 	.uleb128 0x3
 	.uleb128 0xe
-	.byte	0x0
-	.byte	0x0
+	.byte	0
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0x16
-	.byte	0x0
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3a
@@ -402,22 +335,22 @@ usartx_txisr_advlnptr:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.byte	0x0
-	.byte	0x0
+	.byte	0
+	.byte	0
 	.uleb128 0x4
 	.uleb128 0x24
-	.byte	0x0
+	.byte	0
 	.uleb128 0xb
 	.uleb128 0xb
 	.uleb128 0x3e
 	.uleb128 0xb
 	.uleb128 0x3
 	.uleb128 0x8
-	.byte	0x0
-	.byte	0x0
+	.byte	0
+	.byte	0
 	.uleb128 0x5
 	.uleb128 0x16
-	.byte	0x0
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
@@ -426,17 +359,17 @@ usartx_txisr_advlnptr:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.byte	0x0
-	.byte	0x0
+	.byte	0
+	.byte	0
 	.uleb128 0x6
 	.uleb128 0xf
-	.byte	0x0
+	.byte	0
 	.uleb128 0xb
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.byte	0x0
-	.byte	0x0
+	.byte	0
+	.byte	0
 	.uleb128 0x7
 	.uleb128 0x13
 	.byte	0x1
@@ -450,11 +383,11 @@ usartx_txisr_advlnptr:
 	.uleb128 0xb
 	.uleb128 0x1
 	.uleb128 0x13
-	.byte	0x0
-	.byte	0x0
+	.byte	0
+	.byte	0
 	.uleb128 0x8
 	.uleb128 0xd
-	.byte	0x0
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3a
@@ -464,14 +397,14 @@ usartx_txisr_advlnptr:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x38
-	.uleb128 0xa
-	.byte	0x0
-	.byte	0x0
+	.uleb128 0xb
+	.byte	0
+	.byte	0
 	.uleb128 0x9
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
-	.uleb128 0xc
+	.uleb128 0x19
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3a
@@ -479,20 +412,22 @@ usartx_txisr_advlnptr:
 	.uleb128 0x3b
 	.uleb128 0xb
 	.uleb128 0x27
-	.uleb128 0xc
+	.uleb128 0x19
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
-	.uleb128 0x1
+	.uleb128 0x6
 	.uleb128 0x40
-	.uleb128 0xa
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
-	.byte	0x0
-	.byte	0x0
+	.byte	0
+	.byte	0
 	.uleb128 0xa
 	.uleb128 0x5
-	.byte	0x0
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3a
@@ -502,14 +437,14 @@ usartx_txisr_advlnptr:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
-	.uleb128 0xa
-	.byte	0x0
-	.byte	0x0
+	.uleb128 0x18
+	.byte	0
+	.byte	0
 	.uleb128 0xb
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
-	.uleb128 0xc
+	.uleb128 0x19
 	.uleb128 0x3
 	.uleb128 0xe
 	.uleb128 0x3a
@@ -517,108 +452,93 @@ usartx_txisr_advlnptr:
 	.uleb128 0x3b
 	.uleb128 0xb
 	.uleb128 0x27
-	.uleb128 0xc
+	.uleb128 0x19
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
-	.uleb128 0x1
+	.uleb128 0x6
 	.uleb128 0x40
-	.uleb128 0xa
-	.byte	0x0
-	.byte	0x0
-	.byte	0x0
-	.section	.debug_pubnames,"",%progbits
-	.4byte	0x43
-	.2byte	0x2
-	.4byte	.Ldebug_info0
-	.4byte	0x18a
-	.4byte	0x13b
-	.ascii	"usartx_txmain_advlnptr\000"
-	.4byte	0x167
-	.ascii	"usartx_txisr_advlnptr\000"
-	.4byte	0x0
-	.section	.debug_pubtypes,"",%progbits
-	.4byte	0x30
-	.2byte	0x2
-	.4byte	.Ldebug_info0
-	.4byte	0x18a
-	.4byte	0x3a
-	.ascii	"uint16_t\000"
-	.4byte	0x76
-	.ascii	"u16\000"
-	.4byte	0x94
-	.ascii	"USARTCBT\000"
-	.4byte	0x0
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.byte	0
 	.section	.debug_aranges,"",%progbits
 	.4byte	0x1c
 	.2byte	0x2
 	.4byte	.Ldebug_info0
 	.byte	0x4
-	.byte	0x0
-	.2byte	0x0
-	.2byte	0x0
+	.byte	0
+	.2byte	0
+	.2byte	0
 	.4byte	.Ltext0
 	.4byte	.Letext0-.Ltext0
-	.4byte	0x0
-	.4byte	0x0
+	.4byte	0
+	.4byte	0
+	.section	.debug_line,"",%progbits
+.Ldebug_line0:
 	.section	.debug_str,"MS",%progbits,1
-.LASF16:
-	.ascii	"ptx_end\000"
-.LASF23:
-	.ascii	"GNU C 4.5.2\000"
-.LASF19:
-	.ascii	"ptx_ctary_begin\000"
-.LASF15:
-	.ascii	"ptx_begin\000"
-.LASF14:
-	.ascii	"ptx_begin_d\000"
-.LASF12:
-	.ascii	"ptx_begin_m\000"
-.LASF27:
-	.ascii	"usartx_txmain_advlnptr\000"
-.LASF1:
-	.ascii	"unsigned char\000"
-.LASF18:
-	.ascii	"ptx_ctary_now_d\000"
-.LASF13:
-	.ascii	"ptx_now_d\000"
-.LASF5:
-	.ascii	"long unsigned int\000"
-.LASF3:
-	.ascii	"short unsigned int\000"
-.LASF17:
-	.ascii	"ptx_ctary_now_m\000"
-.LASF11:
-	.ascii	"ptx_now_m\000"
-.LASF20:
-	.ascii	"tx_ln_sz\000"
-.LASF22:
-	.ascii	"pUSARTcbtx\000"
-.LASF8:
-	.ascii	"unsigned int\000"
-.LASF7:
-	.ascii	"long long unsigned int\000"
 .LASF28:
-	.ascii	"usartx_txisr_advlnptr\000"
-.LASF24:
-	.ascii	"usartx_tx_advlnptr.c\000"
-.LASF6:
-	.ascii	"long long int\000"
-.LASF10:
-	.ascii	"char\000"
-.LASF25:
-	.ascii	"/home/deh/launchpadtest/sensor/launchpadtest/trunk/"
-	.ascii	"libusartstm32\000"
+	.ascii	"usartx_txmain_advlnptr\000"
+.LASF16:
+	.ascii	"ptx_begin\000"
 .LASF2:
 	.ascii	"short int\000"
+.LASF24:
+	.ascii	"GNU C 4.9.3 20150529 (release) [ARM/embedded-4_9-br"
+	.ascii	"anch revision 224288] -mcpu=cortex-m3 -mthumb -g -O"
+	.ascii	"s -fno-common\000"
 .LASF9:
-	.ascii	"uint16_t\000"
+	.ascii	"__uint16_t\000"
+.LASF23:
+	.ascii	"pUSARTcbtx\000"
+.LASF27:
+	.ascii	"USARTCBT\000"
+.LASF15:
+	.ascii	"ptx_begin_d\000"
+.LASF25:
+	.ascii	"usartx_tx_advlnptr.c\000"
+.LASF13:
+	.ascii	"ptx_begin_m\000"
+.LASF17:
+	.ascii	"ptx_end\000"
+.LASF22:
+	.ascii	"tx_ln_ct\000"
+.LASF14:
+	.ascii	"ptx_now_d\000"
+.LASF6:
+	.ascii	"long long int\000"
 .LASF4:
 	.ascii	"long int\000"
+.LASF12:
+	.ascii	"ptx_now_m\000"
+.LASF1:
+	.ascii	"unsigned char\000"
+.LASF20:
+	.ascii	"ptx_ctary_begin\000"
 .LASF0:
 	.ascii	"signed char\000"
+.LASF7:
+	.ascii	"long long unsigned int\000"
+.LASF29:
+	.ascii	"usartx_txisr_advlnptr\000"
+.LASF8:
+	.ascii	"unsigned int\000"
+.LASF10:
+	.ascii	"uint16_t\000"
 .LASF21:
-	.ascii	"tx_ln_ct\000"
+	.ascii	"tx_ln_sz\000"
+.LASF3:
+	.ascii	"short unsigned int\000"
+.LASF11:
+	.ascii	"char\000"
 .LASF26:
-	.ascii	"USARTCBT\000"
-	.ident	"GCC: (Sourcery G++ Lite 2011.03-42) 4.5.2"
+	.ascii	"/home/deh/launchpad_fp_test/libusartstm32\000"
+.LASF19:
+	.ascii	"ptx_ctary_now_d\000"
+.LASF5:
+	.ascii	"long unsigned int\000"
+.LASF18:
+	.ascii	"ptx_ctary_now_m\000"
+	.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150529 (release) [ARM/embedded-4_9-branch revision 224288]"

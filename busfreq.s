@@ -150,10 +150,10 @@ hclk_freq:
 	.section	.debug_str,"MS",%progbits,1
 .LASF1:
 	.ascii	"pclk1_freq\000"
-.LASF2:
-	.ascii	"pclk2_freq\000"
 .LASF5:
 	.ascii	"busfreq.c\000"
+.LASF3:
+	.ascii	"sysclk_freq\000"
 .LASF0:
 	.ascii	"hclk_freq\000"
 .LASF4:
@@ -161,10 +161,10 @@ hclk_freq:
 	.ascii	"anch revision 224288] -mlittle-endian -mthumb -mthu"
 	.ascii	"mb-interwork -mcpu=cortex-m3 -mfloat-abi=soft -g -O"
 	.ascii	"s -std=gnu99 -fno-common\000"
-.LASF3:
-	.ascii	"sysclk_freq\000"
+.LASF6:
+	.ascii	"/home/deh/launchpad_fp_test\000"
 .LASF7:
 	.ascii	"unsigned int\000"
-.LASF6:
-	.ascii	"/home/deh/launchpadtest/sensor/launchpadtest/trunk\000"
+.LASF2:
+	.ascii	"pclk2_freq\000"
 	.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150529 (release) [ARM/embedded-4_9-branch revision 224288]"
